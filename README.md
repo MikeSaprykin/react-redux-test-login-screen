@@ -1,6 +1,7 @@
 # React Redux Login Form Test Task
 A test task for generating login screen with provided PSD template and ReactJS as
 required tool.
+
 [![CircleCI](https://circleci.com/gh/MikeSaprykin/react-redux-test-login-screen.svg?style=svg)](https://circleci.com/gh/MikeSaprykin/react-redux-test-login-screen)
 [![codecov](https://codecov.io/gh/MikeSaprykin/react-redux-test-login-screen/branch/master/graph/badge.svg)](https://codecov.io/gh/MikeSaprykin/react-redux-test-login-screen)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/MikeSaprykin/react-redux)
