@@ -21,6 +21,7 @@ const forceSSL = () => {
 // Instruct the app
 // to use the forceSSL
 // middleware
+
 if (process.env.NODE_ENV === 'production') {
     app.use(forceSSL());
 }

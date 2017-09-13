@@ -16,8 +16,12 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "server": "npm run build && ts-node server.ts",
+    "server": "npm run server:dev",
+    "server:dev": "cross-env NODE_ENV=development npm run server:build-and-start",
+    "server:prod": "cross-env NODE_ENV=production npm run server:build-and-start",
+    "server:build-and-start": "npm run build && ts-node server.ts",
     "test": "react-scripts-ts test --env=jsdom --coverage",
+    "tdd": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
