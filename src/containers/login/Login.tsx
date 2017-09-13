@@ -17,16 +17,21 @@ class Login extends React.Component<any> {
             <div className="login">
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}
                       autoComplete="off">
-                    <Input name="username"
-                           placeholder="Username"
-                           icon="user"/>
-                    <Input name="password"
-                           placeholder="Password"
-                           type="password"
-                           icon="lock"/>
-                    <button type="submit" className="login-form__button">
-                        SUBMIT
-                    </button>
+                    <div className="login-form">
+                        <Input name="username"
+                               placeholder="Username"
+                               icon="user"/>
+                        <Input name="password"
+                               placeholder="Password"
+                               type="password"
+                               icon="lock"/>
+                        <p className="forgot-password">
+                            Forgot password?
+                        </p>
+                        <button type="submit" className="login-form__button">
+                            LOGIN
+                        </button>
+                    </div>
                 </form>
             </div>
         )

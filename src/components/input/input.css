@@ -1,17 +1,31 @@
 .input-field {
   display: inline-block;
   position: relative; }
+  .input-field-block {
+    display: flex;
+    flex-direction: column; }
+    .input-field-block.has-error .input-field__input {
+      border-color: #F44336; }
   .input-field__input {
-    height: 75px;
-    width: 480px;
+    padding: 30px 0 30px 80px;
     border: 1px solid #e2e2e2;
     border-radius: 25px;
-    font-family: 'Roboto', sans-serif;
     font-size: 22px;
-    user-select: none;
     outline: none;
-    padding-left: 80px;
-    color: #124E70; }
+    color: #124E70;
+    transition: all .100s ease-in-out; }
+    .input-field__input::placeholder {
+      color: #a4b4c0; }
+    .input-field__input:focus {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.22); }
+  .input-field__error {
+    min-height: 18px;
+    font-size: 13px;
+    color: #F44336;
+    font-style: italic;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    padding-left: 2rem; }
   .input-field__icon {
     height: 40px;
     width: 40px;

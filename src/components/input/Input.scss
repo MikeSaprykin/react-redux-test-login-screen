@@ -1,21 +1,45 @@
 @import '../../scss/colors';
+@import '../../scss/shadows';
 
 .input-field {
 
   display: inline-block;
   position: relative;
 
+  &-block {
+    display: flex;
+    flex-direction: column;
+    &.has-error {
+      .input-field__input {
+        border-color: $danger;
+      }
+    }
+  }
+
   &__input {
-    height: 75px;
-    width: 480px;
+    padding: 30px 0 30px 80px;
     border: 1px solid $muted-lighten;
     border-radius: 25px;
-    font-family: 'Roboto', sans-serif;
     font-size: 22px;
-    user-select: none;
     outline: none;
-    padding-left: 80px;
     color: #124E70;
+    transition: all .100s ease-in-out;
+    &::placeholder {
+      color: $muted;
+    }
+    &:focus {
+      box-shadow: $elevation-1-hover;
+    }
+  }
+
+  &__error {
+    min-height: 18px;
+    font-size: 13px;
+    color: $danger;
+    font-style: italic;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    padding-left: 2rem;
   }
 
   &__icon {

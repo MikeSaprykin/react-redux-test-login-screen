@@ -1,6 +1,39 @@
+@import "../../scss/colors";
+@import "../../scss/shadows";
+
 .login {
 
-  &-form__button {
+  &-form {
 
+    display: flex;
+    flex-direction: column;
+
+    &__button {
+      background: $primary;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      color: #fff;
+      font-size: 22px;
+      border-radius: 25px;
+      padding: 30px 0;
+      cursor: pointer;
+      transition: all .1s ease-in-out;
+      &:hover {
+        box-shadow: $elevation-1-hover;
+      }
+      &:active {
+        background: $primary-darken;
+      }
+    }
+  }
+
+
+  .forgot-password {
+    color: $muted-darken;
+    font-size: 22px;
+    cursor: pointer;
+    text-align: right;
+    margin-top: 0;
   }
 }

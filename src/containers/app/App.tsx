@@ -9,7 +9,7 @@ export class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <div className="App-Login-Block">
+          <div className="app-login">
             <Logo />
             <LoginForm />
           </div>
