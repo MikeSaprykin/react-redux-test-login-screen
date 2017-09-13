@@ -4,10 +4,12 @@ import { Provider } from 'react-redux';
 import { App } from './containers';
 import './index.css';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { createStore } from 'redux';
-import { rootReducer } from './store';
+import {applyMiddleware, createStore} from 'redux';
+import { rootReducer, epicMiddleware } from './store';
 
-const store = createStore(rootReducer, composeWithDevTools());
+const store = createStore(rootReducer, composeWithDevTools(
+    applyMiddleware(epicMiddleware)
+));
 
 
 ReactDOM.render(
