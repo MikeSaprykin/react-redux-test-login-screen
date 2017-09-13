@@ -14,8 +14,13 @@ class Login extends React.Component<any> {
         return (<div>
             <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                 <Input name="username"
-                       placeholder="Username"/>
-                <button> SUBMIT</button>
+                       placeholder="Username"
+                       icon="user"/>
+                <Input name="password"
+                       placeholder="Password"
+                       type="password"
+                       icon="lock"/>
+                <button type="submit"> SUBMIT</button>
             </form>
         </div>)
     }

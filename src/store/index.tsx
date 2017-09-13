@@ -7,5 +7,5 @@ export const epicMiddleware = createEpicMiddleware(authEpics);
 
 export const rootReducer = combineReducers({
    auth: authReducer,
-   forms: formReducer
+   form: formReducer
 });
