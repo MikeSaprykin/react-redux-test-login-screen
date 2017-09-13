@@ -41,7 +41,7 @@ jobs:
   docker-job-master:
       docker:
         # specify the version you desire here
-        - image: circleci/node:8
+        - image: circleci/node:7.10
 
         # Specify service dependencies here if necessary
         # CircleCI maintains a library of pre-built images
@@ -80,12 +80,12 @@ jobs:
 
 workflows:
   version: 2
-  install-and-test:
+  install-test-build-image:
     jobs:
       - test
-    - docker-job-master:
-      requires:
-        - test
-      filters:
-        branches:
-          only: master
+      - docker-job-master:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
