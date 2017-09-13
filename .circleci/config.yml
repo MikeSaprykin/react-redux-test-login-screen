@@ -38,8 +38,54 @@ jobs:
             # run codecov
       - run: ./node_modules/.bin/codecov --token=$CODECOV_TOKEN
 
+  docker-job-master:
+      docker:
+        # specify the version you desire here
+        - image: circleci/node:7.10
+
+        # Specify service dependencies here if necessary
+        # CircleCI maintains a library of pre-built images
+        # documented at https://circleci.com/docs/2.0/circleci-images/
+        # - image: circleci/mongo:3.4.4
+
+      working_directory: ~/repo
+
+      steps:
+        - checkout
+
+        - setup_remote_docker
+        # Download and cache dependencies
+        - restore_cache:
+            keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+        - run: yarn install
+
+        - save_cache:
+            paths:
+              - node_modules
+            key: v1-dependencies-{{ checksum "package.json" }}
+
+        - run: yarn build
+
+        - run: yarn docker:build
+
+        - run: docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+
+        - run: yarn docker:push
+
+        - run: docker logout
+
 workflows:
   version: 2
-  install-and-test:
+  install-test-build-image:
     jobs:
       - test
+      - docker-job-master:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
