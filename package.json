@@ -21,7 +21,7 @@
     "server:prod": "cross-env NODE_ENV=production npm run server:build-and-start",
     "server:build-and-start": "npm run build && ts-node server.ts",
     "test": "react-scripts-ts test --env=jsdom --coverage",
-    "tdd": "react-scripts-ts test --env=jsdom",
+    "tdd": "react-scripts-ts test --env=jsdom --watchAll",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
