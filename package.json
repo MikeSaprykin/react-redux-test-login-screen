@@ -22,7 +22,7 @@
     "server:build-and-start": "npm run build && npm run node-server",
     "node-server": "ts-node server.ts",
     "docker": "npm run docker:build && docker run -d -p 80:8080 mikesaprykin/react-redux-test-login",
-    "docker:build": "docker build . -ts mikesaprykin/react-redux-test-login",
+    "docker:build": "docker build . -t mikesaprykin/react-redux-test-login",
     "docker:push": "docker push mikesaprykin/react-redux-test-login",
     "test": "react-scripts-ts test --env=jsdom --coverage",
     "tdd": "react-scripts-ts test --env=jsdom --watchAll",
