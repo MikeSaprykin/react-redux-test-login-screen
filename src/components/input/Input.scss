@@ -1,0 +1,39 @@
+@import '../../scss/colors';
+
+.input-field {
+
+  display: inline-block;
+  position: relative;
+
+  &__input {
+    height: 75px;
+    width: 480px;
+    border: 1px solid $muted-lighten;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    user-select: none;
+    outline: none;
+    padding-left: 80px;
+    color: #124E70;
+  }
+
+  &__icon {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    &.user {
+      background: url(./user.png) no-repeat center center;
+      background-size: contain;
+    }
+    &.lock {
+      background: url(./lock.png) no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+}

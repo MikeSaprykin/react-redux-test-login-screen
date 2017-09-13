@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { reduxForm } from 'redux-form';
-import {connect} from 'react-redux';
-import {Input} from '../../components/input/Input';
-import {loginUser} from '../../store/auth';
-import {LoginUserPayload} from '../../store/auth/actions/auth.actions';
+import { connect } from 'react-redux';
+import { Input } from '../../components';
+import { loginUser, LoginUserPayload } from '../../store/auth';
+import './Login.css'
 
 class Login extends React.Component<any> {
 
@@ -13,18 +13,23 @@ class Login extends React.Component<any> {
 
     render() {
         const { handleSubmit } = this.props;
-        return (<div>
-            <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-                <Input name="username"
-                       placeholder="Username"
-                       icon="user"/>
-                <Input name="password"
-                       placeholder="Password"
-                       type="password"
-                       icon="lock"/>
-                <button type="submit"> SUBMIT</button>
-            </form>
-        </div>)
+        return (
+            <div className="login">
+                <form onSubmit={handleSubmit(this.onSubmit.bind(this))}
+                      autoComplete="off">
+                    <Input name="username"
+                           placeholder="Username"
+                           icon="user"/>
+                    <Input name="password"
+                           placeholder="Password"
+                           type="password"
+                           icon="lock"/>
+                    <button type="submit" className="login-form__button">
+                        SUBMIT
+                    </button>
+                </form>
+            </div>
+        )
     }
 
 }

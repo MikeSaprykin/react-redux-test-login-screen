@@ -1,20 +1,19 @@
 import * as React from 'react';
-import { Field, WrappedFieldProps } from 'redux-form';
+import { Field } from 'redux-form';
+import './input.css'
 
 export class Input extends React.Component<any> {
 
-    renderField(field: WrappedFieldProps) {
-        const { meta: { error, touched }, input} = field;
-        const { placeholder, type = 'text' } = this.props;
-        const className = `input-field ${touched && error ? 'has-error' : ''}`;
+    renderField(field) {
+        const { meta: { error, touched }} = field;
+        const { input, type = 'text', placeholder} = field;
+        const className = `input-field-block ${touched && error ? 'has-error' : ''}`;
         return (
             <div className={className}>
-                {this.renderIcon()}
                 <input className="input-field__input"
                        type={type}
                        placeholder={placeholder}
-                       {...input}
-                />
+                       {...input}/>
                 <div className="input-field__error">
                     {touched ? error : ''}
                 </div>
@@ -30,10 +29,14 @@ export class Input extends React.Component<any> {
     }
 
     render() {
+        const { name, placeholder, type } = this.props;
         return (
-            <div className="Input">
-                <Field name={this.props.name}
-                       component={this.renderField.bind(this)} />
+            <div className="input-field">
+                {this.renderIcon()}
+                <Field name={name}
+                       placeholder={placeholder}
+                       type={type}
+                       component={this.renderField} />
             </div>
         )
     }

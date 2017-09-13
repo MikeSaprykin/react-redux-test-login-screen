@@ -1,0 +1,27 @@
+.input-field {
+  display: inline-block;
+  position: relative; }
+  .input-field__input {
+    height: 75px;
+    width: 480px;
+    border: 1px solid #e2e2e2;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    user-select: none;
+    outline: none;
+    padding-left: 80px;
+    color: #124E70; }
+  .input-field__icon {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px; }
+    .input-field__icon.user {
+      background: url(./user.png) no-repeat center center;
+      background-size: contain; }
+    .input-field__icon.lock {
+      background: url(./lock.png) no-repeat center center;
+      background-size: contain; }
