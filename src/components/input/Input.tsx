@@ -15,6 +15,9 @@ export class Input extends React.Component<any> {
                        placeholder={placeholder}
                        {...input}
                 />
+                <div className="input-field__error">
+                    {touched ? error : ''}
+                </div>
             </div>
         )
     }
