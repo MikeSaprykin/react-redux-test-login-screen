@@ -15,6 +15,8 @@ required tool.
 * Redux-Observable
 * RxJS
 * Redux-Form
+* Jest
+* Create-React-App
 * NodeJS
 * CircleCI
 * CodeCov
