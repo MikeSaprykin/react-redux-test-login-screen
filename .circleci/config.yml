@@ -37,3 +37,9 @@ jobs:
       - run: yarn test
             # run codecov
       - run: ./node_modules/.bin/codecov --token=$CODECOV_TOKEN
+
+workflows:
+  version: 2
+  install-and-test:
+    jobs:
+      - test
