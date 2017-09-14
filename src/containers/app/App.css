@@ -1,5 +1,24 @@
 .app-login {
+  width: 40%;
+  margin-left: 10%;
+  margin-top: 2rem; }
+  @media (max-width: 950px) {
+    .app-login {
+      width: 80%; } }
+  .app-login-logo {
+    margin-bottom: 3rem; }
+    .app-login-logo img {
+      display: inline-block;
+      width: 100%; }
+
+.app-notebook-image {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 40%; }
+  @media (max-width: 950px) {
+    .app-notebook-image {
+      display: none; } }
 
 .background-image {
   position: absolute;
