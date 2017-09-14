@@ -15,7 +15,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 40%; }
+  width: 35%; }
   @media (max-width: 950px) {
     .app-notebook-image {
       display: none; } }
