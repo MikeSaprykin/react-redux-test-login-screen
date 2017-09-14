@@ -1,0 +1,63 @@
+@import '../../scss/colors';
+@import '../../scss/shadows';
+
+.input-field {
+
+  display: inline-block;
+  position: relative;
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    &.has-error {
+      .input-field__input {
+        border-color: $danger;
+      }
+    }
+  }
+
+  &__input {
+    padding: 35px 0 35px 90px;
+    border: 1px solid $muted-lighten;
+    border-radius: 25px;
+    font-size: 22px;
+    outline: none;
+    color: #124E70;
+    transition: all .100s ease-in-out;
+    &::placeholder {
+      color: $muted;
+    }
+    &:focus {
+      box-shadow: $elevation-1-hover;
+    }
+  }
+
+  &__error {
+    min-height: 18px;
+    font-size: 13px;
+    color: $danger;
+    font-style: italic;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    padding-left: 2rem;
+  }
+
+  &__icon {
+    height: 45px;
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    left: 35px;
+
+    &.user {
+      background: url(./user.png) no-repeat center center;
+      background-size: contain;
+    }
+    &.lock {
+      background: url(./lock.png) no-repeat center center;
+      background-size: contain;
+    }
+  }
+
+}
