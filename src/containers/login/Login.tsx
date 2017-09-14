@@ -64,10 +64,10 @@ class Login extends React.Component<any> {
 
 const validate = (values) => {
     const errors: any = {};
-    if (!values.username) {
+    if (!values.username.trim()) {
         errors.username = 'Username is required!';
     }
-    if (!values.password) {
+    if (!values.password.trim()) {
         errors.password = 'Password is required!';
     }
     return errors;
