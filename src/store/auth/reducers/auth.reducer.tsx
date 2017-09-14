@@ -18,8 +18,8 @@ const lookUp: ReducerLookUp<AuthState> = {
     [types.LOGIN_USER]: (state, action) => {
         return {...state, pending: true, loginError: false}
     },
-    [types.LOGIN_USER_ERROR]: (state, { payload }) => {
-        return {...state, pending: false, loginError: payload}
+    [types.LOGIN_USER_ERROR]: (state, action) => {
+        return {...state, pending: false, loginError: 'Username or password is invalid!'}
     },
     [types.LOGIN_USER_SUCCESS]: (state, action) => {
         return {...state, pending: false, loginError: false, isLoggedIn: true}

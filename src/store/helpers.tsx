@@ -8,6 +8,10 @@ export interface ReducerLookUp<T> {
     [key: string]: (state: T, action) => T;
 }
 
+export function toPayload (action: ActionWithPayload<any>) {
+    return action.payload;
+}
+
 export function lookUpMatcher<T>(
     lookUp: ReducerLookUp<T>,
     state: T,

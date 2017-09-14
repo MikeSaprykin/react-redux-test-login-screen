@@ -3,6 +3,7 @@ import { reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { Input } from '../../components';
 import { loginUser, LoginUserPayload } from '../../store/auth';
+import { loginError } from '../../store';
 import './Login.css'
 
 class Login extends React.Component<any> {
@@ -11,10 +12,20 @@ class Login extends React.Component<any> {
         this.props.loginUser(values);
     }
 
+    renderLoginError() {
+        const { loginError } = this.props;
+        return (
+            loginError ?
+                <div className="login-error">
+                    {loginError}
+                </div> : null)
+    }
+
     render() {
         const { handleSubmit } = this.props;
         return (
             <div className="login">
+                {this.renderLoginError()}
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}
                       autoComplete="off">
                     <div className="login-form">
@@ -51,9 +62,12 @@ const validate = (values) => {
 };
 
 const form = 'LoginForm';
+const mapStateToProps = (state) => {
+  return { loginError: loginError(state) }
+};
 
 export const LoginForm = reduxForm<LoginUserPayload, any>({
     form, validate
 })(
-    connect(null, { loginUser })(Login)
+    connect(mapStateToProps, { loginUser })(Login)
 );

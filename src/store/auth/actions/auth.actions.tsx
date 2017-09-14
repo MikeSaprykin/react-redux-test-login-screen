@@ -16,10 +16,9 @@ export const loginUser = (
     }
 };
 
-export const loginUserError = (payload: any): ActionWithPayload<any> => {
+export const loginUserError = (): Action => {
     return {
-        type: types.LOGIN_USER_ERROR,
-        payload
+        type: types.LOGIN_USER_ERROR
     }
 };
 

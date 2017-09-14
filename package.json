@@ -7,8 +7,10 @@
     "@types/node": "^8.0.28",
     "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
+    "history": "^4.7.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-redux": "^5.0.0-alpha.6",
     "react-scripts-ts": "^2.6.0"
   },
   "scripts": {
@@ -30,10 +32,12 @@
   },
   "devDependencies": {
     "@types/express": "^4.0.37",
+    "@types/history": "^2.0.48",
     "@types/jest": "^20.0.8",
     "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
     "@types/react-redux": "^5.0.8",
+    "@types/react-router": "^4.0.15",
     "@types/react-router-dom": "^4.0.7",
     "@types/react-router-redux": "^5.0.8",
     "@types/redux-form": "^7.0.5",

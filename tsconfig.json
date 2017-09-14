@@ -13,8 +13,7 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "suppressImplicitAnyIndexErrors": true
   },
   "typeRoots": [
     "node_modules/@types"
