@@ -17,7 +17,7 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts-ts start",
-    "build": "npm run build-css && react-scripts-ts build",
+    "build": "react-scripts-ts build",
     "server": "npm run server:dev",
     "server:dev": "cross-env NODE_ENV=development npm run server:build-and-start",
     "server:prod": "cross-env NODE_ENV=production npm run server:build-and-start",
