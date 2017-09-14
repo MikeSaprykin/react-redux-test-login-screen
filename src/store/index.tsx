@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
 import { reducer as formReducer } from 'redux-form';
-import { authReducer, authEpics, loginErrorState} from './auth';
+import { authReducer, authEpics, loginErrorState } from './auth';
 import { routerReducer } from 'react-router-redux';
 import { createSelector } from 'reselect';
 

@@ -8,10 +8,10 @@ const notebook = require('./notebook.png');
 export class App extends React.Component {
   render() {
     return (
-      <div className="App">
-          <img className="app-notebook-image" src={notebook} alt="Notebook"/>
-          <div className="app-login">
-              <div className="app-login-logo">
+      <div className='App'>
+          <img className='app-notebook-image' src={notebook} alt='Notebook'/>
+          <div className='app-login'>
+              <div className='app-login-logo'>
                 <Logo />
               </div>
             <LoginForm />

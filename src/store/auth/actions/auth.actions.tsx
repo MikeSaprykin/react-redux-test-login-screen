@@ -13,17 +13,17 @@ export const loginUser = (
     return {
         type: types.LOGIN_USER,
         payload
-    }
+    };
 };
 
 export const loginUserError = (): Action => {
     return {
         type: types.LOGIN_USER_ERROR
-    }
+    };
 };
 
 export const loginUserSuccess = (): Action => {
     return {
         type: types.LOGIN_USER_SUCCESS
-    }
+    };
 };
