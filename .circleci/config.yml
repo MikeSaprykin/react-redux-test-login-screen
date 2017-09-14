@@ -68,7 +68,7 @@ jobs:
               - node_modules
             key: v1-dependencies-{{ checksum "package.json" }}
 
-        - run: yarn build
+        - run: npm run build
 
         - run: yarn docker:build
 
