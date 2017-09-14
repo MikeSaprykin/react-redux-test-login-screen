@@ -6,6 +6,6 @@ export class LoggedIn extends React.Component {
             <div>
                 <h2>You've successfully logged in!</h2>
             </div>
-        )
+        );
     }
 }
