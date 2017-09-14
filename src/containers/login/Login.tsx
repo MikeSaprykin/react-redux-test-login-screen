@@ -6,6 +6,11 @@ import { loginUser, LoginUserPayload } from '../../store/auth';
 import { loginError } from '../../store';
 import './Login.css'
 
+/**
+ * TO PERFORM SUCCESSFUL LOGIN USE CREDENTIALS:
+ * username: test
+ * password: 123qwe123
+ */
 class Login extends React.Component<any> {
 
     onSubmit(values) {
